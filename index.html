@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saumit Guduguntla — Portfolio</title>
+  <meta name="description" content="Computer Science at George Mason University. Building software across Applied AI, Cybersecurity, and Cloud Infrastructure.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Subtle Ambient Glows -->
+  <div class="ambient-glows" aria-hidden="true">
+    <div class="glow-top"></div>
+    <div class="glow-mid"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <div class="nav-left">
+        <a href="#home" class="nav-brand" aria-label="Saumit Guduguntla - Home">
+          <span>Saumit Guduguntla</span>
+        </a>
+      </div>
+
+      <!-- Dynamic Section Tracker (Interactive ticker with numbers) -->
+      <div class="nav-center">
+        <a href="#projects" class="header-label" id="headerTracker" aria-label="Current section indicator">
+          <span class="tracker-prefix">LOC:</span>
+          <span class="tracker-num" id="trackerNum">01</span>
+          <span class="tracker-sep">/</span>
+          <span class="tracker-title" id="trackerTitle">PROJECTS</span>
+          <span class="tracker-arrow">↘</span>
+        </a>
+      </div>
+
+      <!-- Desktop Numbered Navigation Links -->
+      <nav class="nav-desktop" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-idx">01</span>Projects</a></li>
+          <li><a href="#awards" class="nav-link" data-section="awards"><span class="nav-idx">02</span>Awards</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills"><span class="nav-idx">03</span>Skills</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-idx">04</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Interactive Menu Toggle (Plutonicsauce style) -->
+      <div class="nav-right">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Toggle navigation drawer">
+          <span class="menu-word" id="menuWord">MENU</span>
+          <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen / Drawer Navigation Overlay -->
+  <nav id="navDrawer" class="nav-drawer" aria-label="Main directory" inert>
+    <div class="container drawer-container">
+      <div class="drawer-top-bar">
+        <span class="drawer-eyebrow">TAKE A LOOK AROUND // DIRECTORY</span>
+        <span class="drawer-count-badge">4 SECTIONS</span>
+      </div>
+
+      <div class="drawer-nav-list">
+        <a href="#projects" class="drawer-link">
+          <div class="drawer-link-left">
+            <span class="drawer-num">01</span>
+            <span class="drawer-text">Projects</span>
+          </div>
+          <div class="drawer-link-right">
+            <span class="drawer-tag">05 BUILDS</span>
+            <span class="drawer-arrow">↘</span>
+          </div>
+        </a>
+
+        <a href="#awards" class="drawer-link">
+          <div class="drawer-link-left">
+            <span class="drawer-num">02</span>
+            <span class="drawer-text">Awards</span>
+          </div>
+          <div class="drawer-link-right">
+            <span class="drawer-tag">02 HONORS</span>
+            <span class="drawer-arrow">↘</span>
+          </div>
+        </a>
+
+        <a href="#skills" class="drawer-link">
+          <div class="drawer-link-left">
+            <span class="drawer-num">03</span>
+            <span class="drawer-text">Technologies</span>
+          </div>
+          <div class="drawer-link-right">
+            <span class="drawer-tag">ARSENAL</span>
+            <span class="drawer-arrow">↘</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="drawer-link">
+          <div class="drawer-link-left">
+            <span class="drawer-num">04</span>
+            <span class="drawer-text">Contact</span>
+          </div>
+          <div class="drawer-link-right">
+            <span class="drawer-tag">GET IN TOUCH</span>
+            <span class="drawer-arrow">↘</span>
+          </div>
+        </a>
+
+        <a href="#home" class="drawer-link drawer-link-home">
+          <div class="drawer-link-left">
+            <span class="drawer-num">00</span>
+            <span class="drawer-text">Back to Top</span>
+          </div>
+          <div class="drawer-link-right">
+            <span class="drawer-tag">HOME</span>
+            <span class="drawer-arrow">↑</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="drawer-bottom-bar">
+        <div class="drawer-email-row">
+          <span class="drawer-label-small">DIRECT INQUIRIES:</span>
+          <button class="copy-email-btn drawer-email-copy" type="button">
+            <span>write2saumitg@gmail.com</span>
+            <span class="drawer-copy-badge">COPY</span>
+          </button>
+        </div>
+        <p class="drawer-footnote">SAUMIT GUDUGUNTLA · GEORGE MASON UNIVERSITY CS '29</p>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span>PROJECT PORTFOLIO / VOL. 01</span>
+          <span>GEORGE MASON UNIVERSITY · CS '29 ↗</span>
+        </div>
+
+        <h1 class="hero-title">
+          Building systems across <br>
+          <span class="gradient-text">Applied AI, Security, and Cloud.</span>
+        </h1>
+
+        <p class="hero-bio">
+          I'm a computer science student at <strong>George Mason University</strong>. I build software where <strong>applied machine learning connects to resilient backend infrastructure</strong>—from global hackathon-winning fraud pipelines to computer-vision emergency triage tools.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-clean">
+            <span>View Projects</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+
+          <button class="btn-email-copy copy-email-btn" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>write2saumitg@gmail.com</span>
+          </button>
+
+          <div class="social-strip">
+            <a href="https://github.com/saumitg26" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/saumit-guduguntla/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects Section (OPEN, NON-BOXY EDITORIAL ENTRIES) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-marker">01 / SELECTED WORK</div>
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p>Production code, hackathon builds, and open-source tooling.</p>
+        </div>
+
+        <!-- Clean Text-Based Filter Tabs -->
+        <div class="filter-nav">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="ai">Applied AI</button>
+          <button class="filter-tab" data-filter="cloud">Cloud Systems</button>
+          <button class="filter-tab" data-filter="security">Cybersecurity</button>
+          <button class="filter-tab" data-filter="mobile">Mobile</button>
+        </div>
+
+        <!-- Project 1: TriageAI -->
+        <article class="project-entry" id="project-triage" data-category="ai">
+          <div class="project-entry-top">
+            <div class="project-title-wrap">
+              <a href="https://github.com/gitsamridhm/TriageAI" target="_blank" rel="noopener noreferrer" class="project-name">TriageAI</a>
+              <span class="project-tagline">Healthcare AI · VTHacks 14</span>
+            </div>
+            <a href="https://github.com/gitsamridhm/TriageAI" target="_blank" rel="noopener noreferrer" class="project-link-clean">
+              <span>View Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <p class="project-story">
+            Emergency rooms get overwhelmed, and nurses often have under two minutes to assess acuity. We built TriageAI to capture vital signs contact-free using Presage camera feeds, calculate explainable ESI priority rankings with Gemini, and maintain a live queue with clinician override safeguards.
+          </p>
+
+          <div class="project-tech-line">
+            Built with <span>React</span> · <span>FastAPI</span> · <span>PostgreSQL</span> · <span>Gemini AI</span> · <span>Presage SDK</span>
+          </div>
+
+          <details class="build-details">
+            <summary>
+              <span>Behind the build</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div class="build-notes">
+              Rather than treating AI triage as a black box, the system structures vital estimates and patient symptoms into discrete clinical criteria. Gemini outputs structured justifications that doctors can inspect and override in one click before queue assignment.
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 2: MissionPay Guard -->
+        <article class="project-entry" id="project-missionpay" data-category="cloud">
+          <div class="project-entry-top">
+            <div class="project-title-wrap">
+              <a href="https://github.com/saumitg26/missionpay_guard" target="_blank" rel="noopener noreferrer" class="project-name">MissionPay Guard</a>
+              <span class="project-tagline tag-blue">🏆 4th Place Global · AWS Maximus Hackathon</span>
+            </div>
+            <a href="https://github.com/saumitg26/missionpay_guard" target="_blank" rel="noopener noreferrer" class="project-link-clean">
+              <span>View Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <p class="project-story">
+            Our team built an automated pre-disbursement payment screening pipeline for public-sector programs. It intercepts disbursements, runs multi-variable fraud checks against ingested documentation, and routes flagged anomalies to a human review workspace before state funds leave the treasury.
+          </p>
+
+          <div class="project-tech-line">
+            Built with <span>AWS Lambda</span> · <span>Step Functions</span> · <span>DynamoDB</span> · <span>Python</span> · <span>TypeScript</span>
+          </div>
+
+          <details class="build-details">
+            <summary>
+              <span>Behind the build</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div class="build-notes">
+              Orchestrated via AWS Step Functions state machines. Each payment intake triggers concurrent document parsing and anomaly detection workers. High-confidence transactions pass cleanly; edge cases trigger hold states in DynamoDB with an immutable audit trail.
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 3: PhishLens -->
+        <article class="project-entry" id="project-phishlens" data-category="security">
+          <div class="project-entry-top">
+            <div class="project-title-wrap">
+              <a href="https://github.com/saumitg26/PhishLens" target="_blank" rel="noopener noreferrer" class="project-name">PhishLens</a>
+              <span class="project-tagline">Browser Security · OpenAI Build Week</span>
+            </div>
+            <a href="https://github.com/saumitg26/PhishLens" target="_blank" rel="noopener noreferrer" class="project-link-clean">
+              <span>View Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <p class="project-story">
+            Most anti-phishing extensions flash an unexplained red block page that users routinely ignore. I built PhishLens to actively parse form targets, brand impersonation cues, and suspicious DOM structures in real time—delivering an evidence-backed score explaining exactly why a link is risky.
+          </p>
+
+          <div class="project-tech-line">
+            Built with <span>TypeScript</span> · <span>Chrome Extension API</span> · <span>Threat Intelligence</span> · <span>DOM Heuristics</span>
+          </div>
+
+          <details class="build-details">
+            <summary>
+              <span>Behind the build</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div class="build-notes">
+              Engineered under Chrome's strict Manifest V3 service-worker constraints. Combines lightweight local threat signatures with heuristic analysis of login inputs and form submission targets to keep evaluation under 50ms without degrading page rendering.
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 4: CyberSurfaceMapper -->
+        <article class="project-entry" id="project-mapper" data-category="security">
+          <div class="project-entry-top">
+            <div class="project-title-wrap">
+              <a href="https://github.com/saumitg26/CyberSurfaceMapper" target="_blank" rel="noopener noreferrer" class="project-name">CyberSurfaceMapper</a>
+              <span class="project-tagline">Security Reconnaissance</span>
+            </div>
+            <a href="https://github.com/saumitg26/CyberSurfaceMapper" target="_blank" rel="noopener noreferrer" class="project-link-clean">
+              <span>View Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <p class="project-story">
+            An automated reconnaissance dashboard written in Python to evaluate the exposure of public domains. Pairs non-intrusive HTTP security header auditing (CSP, HSTS, X-Frame) with multi-threaded port probing to provide a clear, actionable posture summary.
+          </p>
+
+          <div class="project-tech-line">
+            Built with <span>Python</span> · <span>Streamlit</span> · <span>Network Sockets</span> · <span>Security Auditing</span>
+          </div>
+
+          <details class="build-details">
+            <summary>
+              <span>Behind the build</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div class="build-notes">
+              Built to replace fragmented CLI lookups with an integrated interface. Uses asynchronous socket connections with strict timeouts to scan common service ports without hanging, then correlates findings with missing defensive headers to score risk.
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 5: PatriotGo -->
+        <article class="project-entry" id="project-patriotgo" data-category="mobile">
+          <div class="project-entry-top">
+            <div class="project-title-wrap">
+              <a href="https://github.com/saumitg26/PatriotGo" target="_blank" rel="noopener noreferrer" class="project-name">PatriotGo</a>
+              <span class="project-tagline tag-blue">Campus Mobility · PatriotHacks</span>
+            </div>
+            <a href="https://github.com/saumitg26/PatriotGo" target="_blank" rel="noopener noreferrer" class="project-link-clean">
+              <span>View Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <p class="project-story">
+            George Mason has a huge commuter population with parking bottlenecks. We built PatriotGo during PatriotHacks—a campus ridesharing app with verified GMU university authentication, live ride posts, eco-tracking, and real-time student messaging.
+          </p>
+
+          <div class="project-tech-line">
+            Built with <span>React Native</span> · <span>Expo</span> · <span>Supabase</span> · <span>Realtime DB</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Awards Section (Interactive Competitive Timeline) -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-marker">02 / COMPETITION AWARDS</div>
+        <div class="section-head">
+          <h2>Awards & Recognition</h2>
+          <p>Verified competitive placements and honors across cloud systems and cybersecurity.</p>
+        </div>
+
+        <!-- Interactive Timeline -->
+        <div class="timeline-wrap">
+          <div class="timeline-axis" aria-hidden="true"></div>
+
+          <div class="timeline-items">
+            <!-- Timeline Item 1: AWS Maximus -->
+            <article class="timeline-item" id="award-maximus">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="node-dot glow-emerald"></span>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-meta-line">
+                    <span class="timeline-badge badge-emerald">GLOBAL TOP 4</span>
+                    <span class="timeline-year">2025 // HACKATHON</span>
+                  </div>
+                  <h3 class="timeline-title">🏆 4th Place Globally — AWS Maximus Hackathon</h3>
+                  <div class="timeline-org">AWS Maximus Global Government Hackathon · Cloud & GovTech</div>
+                </div>
+
+                <p class="timeline-narrative">
+                  Placed 4th out of hundreds of international collegiate and professional teams. Designed and demonstrated <strong>MissionPay Guard</strong>, an automated fraud-screening and payment auditing pipeline evaluated by senior AWS solution architects and public-sector tech leadership.
+                </p>
+
+                <div class="timeline-metrics">
+                  <span class="metric-pill">4th Place Worldwide</span>
+                  <span class="metric-pill">Evaluated by Senior AWS Architects</span>
+                  <span class="metric-pill">Serverless State Machines</span>
+                  <span class="metric-pill">Pre-Disbursement Audit</span>
+                </div>
+
+                <details class="timeline-details">
+                  <summary class="timeline-summary">
+                    <span>Technical Evaluation & Scope</span>
+                    <span class="summary-toggle-icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="timeline-details-body">
+                    <p>
+                      Built on AWS Lambda, Step Functions, and DynamoDB. The pipeline intercepts treasury disbursement feeds, executes sub-second document and entity checks, and flags anomalous transactions for human auditor sign-off before state funds leave the treasury.
+                    </p>
+                    <a href="#project-missionpay" class="timeline-jump-btn" data-project-target="project-missionpay">
+                      <span>Jump to MissionPay Guard in Projects</span>
+                      <span aria-hidden="true">↘</span>
+                    </a>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <!-- Timeline Item 2: CyberPatriot -->
+            <article class="timeline-item" id="award-cyberpatriot">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="node-dot glow-blue"></span>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-meta-line">
+                    <span class="timeline-badge badge-blue">NATIONAL SEMIFINALS</span>
+                    <span class="timeline-year">PLATINUM DIVISION</span>
+                  </div>
+                  <h3 class="timeline-title">🛡️ CyberPatriot Platinum Semifinalist</h3>
+                  <div class="timeline-org">National Youth Cyber Defense Competition · Platinum Tier</div>
+                </div>
+
+                <p class="timeline-narrative">
+                  Reached the elite Platinum Semifinal tier in the national CyberPatriot defensive security challenge. Conducted forensic vulnerability audits, defensive OS hardening, and security policy enforcement across Linux and Windows server environments.
+                </p>
+
+                <div class="timeline-metrics">
+                  <span class="metric-pill">Platinum Division (Top Tier)</span>
+                  <span class="metric-pill">Linux & Windows Server Hardening</span>
+                  <span class="metric-pill">Forensic Backdoor Discovery</span>
+                  <span class="metric-pill">CIS Benchmark Audits</span>
+                </div>
+
+                <details class="timeline-details">
+                  <summary class="timeline-summary">
+                    <span>Technical Evaluation & Scope</span>
+                    <span class="summary-toggle-icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="timeline-details-body">
+                    <p>
+                      Conducted under strict timed competition conditions. Identified and neutralized unauthorized services, secured SSH/PAM configurations, repaired corrupt file permissions, configured strict iptables/firewall rules, and audited user accounts for privilege escalation vectors.
+                    </p>
+                    <a href="#project-mapper" class="timeline-jump-btn" data-project-target="project-mapper">
+                      <span>Jump to CyberSurfaceMapper in Projects</span>
+                      <span aria-hidden="true">↘</span>
+                    </a>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack (Interactive Arsenal with Live Relationship Inspector) -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-marker">03 / TECHNICAL ARSENAL</div>
+        <div class="section-head">
+          <h2>Technologies & Systems</h2>
+          <p>Languages, cloud infrastructure, and security frameworks applied in competition and production.</p>
+        </div>
+
+        <!-- Interactive Category Switcher -->
+        <div class="tech-filter-nav" role="tablist" aria-label="Technology filter">
+          <button class="tech-tab active" data-tech-filter="all" role="tab" aria-selected="true">All (24)</button>
+          <button class="tech-tab" data-tech-filter="languages" role="tab" aria-selected="false">Languages (6)</button>
+          <button class="tech-tab" data-tech-filter="cloud" role="tab" aria-selected="false">Backend & Cloud (7)</button>
+          <button class="tech-tab" data-tech-filter="ai-sec" role="tab" aria-selected="false">AI & Security (6)</button>
+          <button class="tech-tab" data-tech-filter="frontend" role="tab" aria-selected="false">Frontend & Mobile (5)</button>
+        </div>
+
+        <!-- Interactive Tech Badges Grid -->
+        <div class="tech-grid" id="techGrid">
+          <!-- Languages -->
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="python" data-name="Python" data-tag="PRIMARY LANGUAGE" data-desc="Primary backend language used for cloud microservices, ML pipelines, and socket recon tools." data-target="project-mapper">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">Python</span>
+            <span class="tech-role">PRIMARY</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="typescript" data-name="TypeScript" data-tag="FULL-STACK & EXTENSIONS" data-desc="Strictly typed browser DOM heuristics in PhishLens and event handling in MissionPay Guard." data-target="project-phishlens">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">TypeScript</span>
+            <span class="tech-role">FULL-STACK</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="java" data-name="Java" data-tag="OOP & ALGORITHMS" data-desc="Object-oriented systems architecture, data structures, and algorithmic foundations at George Mason." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">Java</span>
+            <span class="tech-role">OOP / DSA</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="javascript" data-name="JavaScript" data-tag="ES6+ / BROWSER RUNTIME" data-desc="Modern asynchronous ES6+ web APIs, DOM mutation observers, and browser extension scripting." data-target="project-phishlens">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">JavaScript</span>
+            <span class="tech-role">ES6+</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="sql" data-name="SQL" data-tag="RELATIONAL SCHEMAS" data-desc="Relational query design, indexing, and schema migrations across PostgreSQL and Supabase." data-target="project-triage">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">SQL</span>
+            <span class="tech-role">RELATIONAL</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="r" data-name="R" data-tag="DATA ANALYSIS" data-desc="Statistical computation, probability modeling, and data distribution analysis at GMU." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">R</span>
+            <span class="tech-role">STATS</span>
+          </button>
+
+          <!-- Backend & Cloud -->
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="aws-lambda" data-name="AWS Lambda" data-tag="SERVERLESS COMPUTE" data-desc="Serverless compute engine orchestrating fraud anomaly scoring in MissionPay Guard (4th Place Global AWS Maximus)." data-target="project-missionpay">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">AWS Lambda</span>
+            <span class="tech-role">SERVERLESS</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="step-functions" data-name="AWS Step Functions" data-tag="STATE MACHINES" data-desc="State machine orchestrating concurrent validation and human review hold-states in MissionPay Guard." data-target="project-missionpay">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">Step Functions</span>
+            <span class="tech-role">STATE MACHINES</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="dynamodb" data-name="AWS DynamoDB" data-tag="NOSQL KEY-VALUE" data-desc="High-throughput NoSQL state persistence with optimistic locking for fraud audit records in MissionPay Guard." data-target="project-missionpay">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">DynamoDB</span>
+            <span class="tech-role">NOSQL</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="fastapi" data-name="FastAPI" data-tag="ASYNC PYTHON" data-desc="High-throughput asynchronous Python REST endpoints and inference serving in TriageAI." data-target="project-triage">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">FastAPI</span>
+            <span class="tech-role">ASYNC REST</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="postgresql" data-name="PostgreSQL" data-tag="RELATIONAL DATABASE" data-desc="Relational storage and clinician override audit trails for emergency triage queues in TriageAI." data-target="project-triage">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">PostgreSQL</span>
+            <span class="tech-role">DATABASE</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="supabase" data-name="Supabase" data-tag="REALTIME & AUTH" data-desc="Realtime database subscriptions, Row-Level Security (RLS), and GMU campus auth in PatriotGo." data-target="project-patriotgo">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Supabase</span>
+            <span class="tech-role">REALTIME</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="nodejs" data-name="Node.js" data-tag="JAVASCRIPT RUNTIME" data-desc="Event-driven runtime for microservices, build pipelines, and CLI automation." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">Node.js</span>
+            <span class="tech-role">RUNTIME</span>
+          </button>
+
+          <!-- AI & Security -->
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="gemini" data-name="Gemini AI" data-tag="CLINICAL REASONING" data-desc="Multi-modal clinical reasoning for contact-free triage and explainable ESI priority scoring in TriageAI." data-target="project-triage">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Gemini AI</span>
+            <span class="tech-role">LLM REASONING</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="presage" data-name="Presage SDK" data-tag="COMPUTER VISION" data-desc="Contact-free camera vitals extraction (heart rate, SpO2) integrated into emergency hospital workflow in TriageAI." data-target="project-triage">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Presage SDK</span>
+            <span class="tech-role">COMPUTER VISION</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="threat-intel" data-name="Threat Intelligence" data-tag="DEFENSIVE SECURITY" data-desc="Real-time URL reputation, domain heuristic analysis, and brand impersonation detection in PhishLens." data-target="project-phishlens">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Threat Intelligence</span>
+            <span class="tech-role">DEFENSIVE</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="sockets" data-name="Network Sockets" data-tag="SOCKET RECON" data-desc="Low-level multi-threaded asynchronous port scanning and security header auditing in CyberSurfaceMapper." data-target="project-mapper">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Network Sockets</span>
+            <span class="tech-role">NETWORKING</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="linux" data-name="Linux" data-tag="OS HARDENING" data-desc="OS hardening, PAM authentication policies, and vulnerability auditing in CyberPatriot Platinum Semifinals." data-target="award-cyberpatriot">
+            <span class="tech-dot dot-emerald"></span>
+            <span class="tech-name">Linux</span>
+            <span class="tech-role">SYSTEMS & SECURITY</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="git" data-name="Git & GitHub" data-tag="VERSION CONTROL" data-desc="Branching strategy, pull requests, automated GitHub Pages deployment, and CI pipelines." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">Git & GitHub</span>
+            <span class="tech-role">VERSION CONTROL</span>
+          </button>
+
+          <!-- Frontend & Mobile -->
+          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="react" data-name="React" data-tag="FRONTEND ARCHITECTURE" data-desc="Component architecture, custom hooks, and state management for TriageAI clinician dashboard." data-target="project-triage">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">React</span>
+            <span class="tech-role">FRONTEND</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="react-native" data-name="React Native" data-tag="CROSS-PLATFORM MOBILE" data-desc="Cross-platform iOS & Android rideshare client built for George Mason students in PatriotGo." data-target="project-patriotgo">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">React Native</span>
+            <span class="tech-role">MOBILE</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="expo" data-name="Expo" data-tag="MOBILE FRAMEWORK" data-desc="Mobile development framework, EAS build pipeline, and device sensors for PatriotGo." data-target="project-patriotgo">
+            <span class="tech-dot dot-blue"></span>
+            <span class="tech-name">Expo</span>
+            <span class="tech-role">MOBILE SDK</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="tailwind" data-name="Tailwind CSS" data-tag="UTILITY-FIRST" data-desc="Responsive utility-first layouts and accessible styling in modern web applications." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">Tailwind CSS</span>
+            <span class="tech-role">UTILITY CSS</span>
+          </button>
+
+          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="figma" data-name="Figma" data-tag="UI/UX DESIGN" data-desc="User flow wireframing, component tokens, and interactive mockups before writing production code." data-target="">
+            <span class="tech-dot dot-muted"></span>
+            <span class="tech-name">Figma</span>
+            <span class="tech-role">UI/UX</span>
+          </button>
+        </div>
+
+        <!-- Live Tech Inspector Bar -->
+        <div class="tech-inspector" id="techInspector">
+          <div class="inspector-status">
+            <span class="inspector-pulse" aria-hidden="true"></span>
+            <span class="inspector-status-title">SYSTEM LINKAGE INSPECTOR</span>
+            <span class="inspector-status-hint">HOVER OR CLICK ANY TECH BADGE</span>
+          </div>
+          <div class="inspector-content">
+            <div class="inspector-header">
+              <span class="inspector-name" id="inspectorName">Select a technology above</span>
+              <span class="inspector-tag" id="inspectorTag" style="display: none;"></span>
+            </div>
+            <p class="inspector-desc" id="inspectorDesc">
+              Hover over or tap any technology above to see where Saumit applied it across hackathon-winning architectures, production systems, and security tooling.
+            </p>
+            <div class="inspector-action" id="inspectorAction" style="display: none;">
+              <a href="#projects" class="inspector-jump-btn" id="inspectorJumpBtn">
+                <span id="inspectorJumpText">Jump to Related Project</span>
+                <span aria-hidden="true">↘</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-clean">
+          <div class="section-marker">04 / CONNECT</div>
+          <h3>Let's build something.</h3>
+          <p>
+            Always down to talk systems architecture, hackathons, or new projects. Drop a note anytime.
+          </p>
+
+          <div class="contact-links-inline">
+            <button class="copy-email-btn" type="button">
+              <span>write2saumitg@gmail.com</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <a href="https://www.linkedin.com/in/saumit-guduguntla/" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/saumitg26" target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <span>Saumit Guduguntla · George Mason University</span>
+      </div>
+      <div>
+        <span>&copy; <span id="year">2026</span> All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" aria-live="polite">
+    <div class="toast" id="toast">
+      <span style="color: var(--emerald);">✓</span>
+      <span class="toast-text">Copied write2saumitg@gmail.com to clipboard!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
