@@ -1,705 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saumit Guduguntla — Portfolio</title>
-  <meta name="description" content="Computer Science at George Mason University. Building software across Applied AI, Cybersecurity, and Cloud Infrastructure.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
-  <!-- Subtle Ambient Glows -->
-  <div class="ambient-glows" aria-hidden="true">
-    <div class="glow-top"></div>
-    <div class="glow-mid"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-wrap">
-      <div class="nav-left">
-        <a href="#home" class="nav-brand" aria-label="Saumit Guduguntla - Home">
-          <span>Saumit Guduguntla</span>
-        </a>
-      </div>
-
-      <!-- Dynamic Section Tracker (Interactive ticker with numbers) -->
-      <div class="nav-center">
-        <a href="#projects" class="header-label" id="headerTracker" aria-label="Current section indicator">
-          <span class="tracker-prefix">LOC:</span>
-          <span class="tracker-num" id="trackerNum">01</span>
-          <span class="tracker-sep">/</span>
-          <span class="tracker-title" id="trackerTitle">PROJECTS</span>
-          <span class="tracker-arrow">↘</span>
-        </a>
-      </div>
-
-      <!-- Desktop Numbered Navigation Links -->
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <ul class="nav-links">
-          <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-idx">01</span>Projects</a></li>
-          <li><a href="#awards" class="nav-link" data-section="awards"><span class="nav-idx">02</span>Awards</a></li>
-          <li><a href="#skills" class="nav-link" data-section="skills"><span class="nav-idx">03</span>Skills</a></li>
-          <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-idx">04</span>Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Interactive Menu Toggle (Plutonicsauce style) -->
-      <div class="nav-right">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Toggle navigation drawer">
-          <span class="menu-word" id="menuWord">MENU</span>
-          <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Fullscreen / Drawer Navigation Overlay -->
-  <nav id="navDrawer" class="nav-drawer" aria-label="Main directory" inert>
-    <div class="container drawer-container">
-      <div class="drawer-top-bar">
-        <span class="drawer-eyebrow">TAKE A LOOK AROUND // DIRECTORY</span>
-        <span class="drawer-count-badge">4 SECTIONS</span>
-      </div>
-
-      <div class="drawer-nav-list">
-        <a href="#projects" class="drawer-link">
-          <div class="drawer-link-left">
-            <span class="drawer-num">01</span>
-            <span class="drawer-text">Projects</span>
-          </div>
-          <div class="drawer-link-right">
-            <span class="drawer-tag">05 BUILDS</span>
-            <span class="drawer-arrow">↘</span>
-          </div>
-        </a>
-
-        <a href="#awards" class="drawer-link">
-          <div class="drawer-link-left">
-            <span class="drawer-num">02</span>
-            <span class="drawer-text">Awards</span>
-          </div>
-          <div class="drawer-link-right">
-            <span class="drawer-tag">02 HONORS</span>
-            <span class="drawer-arrow">↘</span>
-          </div>
-        </a>
-
-        <a href="#skills" class="drawer-link">
-          <div class="drawer-link-left">
-            <span class="drawer-num">03</span>
-            <span class="drawer-text">Technologies</span>
-          </div>
-          <div class="drawer-link-right">
-            <span class="drawer-tag">ARSENAL</span>
-            <span class="drawer-arrow">↘</span>
-          </div>
-        </a>
-
-        <a href="#contact" class="drawer-link">
-          <div class="drawer-link-left">
-            <span class="drawer-num">04</span>
-            <span class="drawer-text">Contact</span>
-          </div>
-          <div class="drawer-link-right">
-            <span class="drawer-tag">GET IN TOUCH</span>
-            <span class="drawer-arrow">↘</span>
-          </div>
-        </a>
-
-        <a href="#home" class="drawer-link drawer-link-home">
-          <div class="drawer-link-left">
-            <span class="drawer-num">00</span>
-            <span class="drawer-text">Back to Top</span>
-          </div>
-          <div class="drawer-link-right">
-            <span class="drawer-tag">HOME</span>
-            <span class="drawer-arrow">↑</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="drawer-bottom-bar">
-        <div class="drawer-email-row">
-          <span class="drawer-label-small">DIRECT INQUIRIES:</span>
-          <button class="copy-email-btn drawer-email-copy" type="button">
-            <span>write2saumitg@gmail.com</span>
-            <span class="drawer-copy-badge">COPY</span>
-          </button>
-        </div>
-        <p class="drawer-footnote">SAUMIT GUDUGUNTLA · GEORGE MASON UNIVERSITY CS '29</p>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-eyebrow">
-          <span>PROJECT PORTFOLIO / VOL. 01</span>
-          <span>GEORGE MASON UNIVERSITY · CS '29 ↗</span>
-        </div>
-
-        <h1 class="hero-title">
-          Building systems across <br>
-          <span class="gradient-text">Applied AI, Security, and Cloud.</span>
-        </h1>
-
-        <p class="hero-bio">
-          I'm a computer science student at <strong>George Mason University</strong>. I build software where <strong>applied machine learning connects to resilient backend infrastructure</strong>—from global hackathon-winning fraud pipelines to computer-vision emergency triage tools.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn-clean">
-            <span>View Projects</span>
-            <span aria-hidden="true">↓</span>
-          </a>
-
-          <button class="btn-email-copy copy-email-btn" type="button">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            <span>write2saumitg@gmail.com</span>
-          </button>
-
-          <div class="social-strip">
-            <a href="https://github.com/saumitg26" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/saumit-guduguntla/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Projects Section (OPEN, NON-BOXY EDITORIAL ENTRIES) -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-marker">01 / SELECTED WORK</div>
-        <div class="section-head">
-          <h2>Featured Projects</h2>
-          <p>Production code, hackathon builds, and open-source tooling.</p>
-        </div>
-
-        <!-- Clean Text-Based Filter Tabs -->
-        <div class="filter-nav">
-          <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="ai">Applied AI</button>
-          <button class="filter-tab" data-filter="cloud">Cloud Systems</button>
-          <button class="filter-tab" data-filter="security">Cybersecurity</button>
-          <button class="filter-tab" data-filter="mobile">Mobile</button>
-        </div>
-
-        <!-- Project 1: TriageAI -->
-        <article class="project-entry" id="project-triage" data-category="ai">
-          <div class="project-entry-top">
-            <div class="project-title-wrap">
-              <a href="https://github.com/gitsamridhm/TriageAI" target="_blank" rel="noopener noreferrer" class="project-name">TriageAI</a>
-              <span class="project-tagline">Healthcare AI · VTHacks 14</span>
-            </div>
-            <a href="https://github.com/gitsamridhm/TriageAI" target="_blank" rel="noopener noreferrer" class="project-link-clean">
-              <span>View Repository</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <p class="project-story">
-            Emergency rooms get overwhelmed, and nurses often have under two minutes to assess acuity. We built TriageAI to capture vital signs contact-free using Presage camera feeds, calculate explainable ESI priority rankings with Gemini, and maintain a live queue with clinician override safeguards.
-          </p>
-
-          <div class="project-tech-line">
-            Built with <span>React</span> · <span>FastAPI</span> · <span>PostgreSQL</span> · <span>Gemini AI</span> · <span>Presage SDK</span>
-          </div>
-
-          <details class="build-details">
-            <summary>
-              <span>Behind the build</span>
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div class="build-notes">
-              Rather than treating AI triage as a black box, the system structures vital estimates and patient symptoms into discrete clinical criteria. Gemini outputs structured justifications that doctors can inspect and override in one click before queue assignment.
-            </div>
-          </details>
-        </article>
-
-        <!-- Project 2: MissionPay Guard -->
-        <article class="project-entry" id="project-missionpay" data-category="cloud">
-          <div class="project-entry-top">
-            <div class="project-title-wrap">
-              <a href="https://github.com/saumitg26/missionpay_guard" target="_blank" rel="noopener noreferrer" class="project-name">MissionPay Guard</a>
-              <span class="project-tagline tag-blue">🏆 4th Place Global · AWS Maximus Hackathon</span>
-            </div>
-            <a href="https://github.com/saumitg26/missionpay_guard" target="_blank" rel="noopener noreferrer" class="project-link-clean">
-              <span>View Repository</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <p class="project-story">
-            Our team built an automated pre-disbursement payment screening pipeline for public-sector programs. It intercepts disbursements, runs multi-variable fraud checks against ingested documentation, and routes flagged anomalies to a human review workspace before state funds leave the treasury.
-          </p>
-
-          <div class="project-tech-line">
-            Built with <span>AWS Lambda</span> · <span>Step Functions</span> · <span>DynamoDB</span> · <span>Python</span> · <span>TypeScript</span>
-          </div>
-
-          <details class="build-details">
-            <summary>
-              <span>Behind the build</span>
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div class="build-notes">
-              Orchestrated via AWS Step Functions state machines. Each payment intake triggers concurrent document parsing and anomaly detection workers. High-confidence transactions pass cleanly; edge cases trigger hold states in DynamoDB with an immutable audit trail.
-            </div>
-          </details>
-        </article>
-
-        <!-- Project 3: PhishLens -->
-        <article class="project-entry" id="project-phishlens" data-category="security">
-          <div class="project-entry-top">
-            <div class="project-title-wrap">
-              <a href="https://github.com/saumitg26/PhishLens" target="_blank" rel="noopener noreferrer" class="project-name">PhishLens</a>
-              <span class="project-tagline">Browser Security · OpenAI Build Week</span>
-            </div>
-            <a href="https://github.com/saumitg26/PhishLens" target="_blank" rel="noopener noreferrer" class="project-link-clean">
-              <span>View Repository</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <p class="project-story">
-            Most anti-phishing extensions flash an unexplained red block page that users routinely ignore. I built PhishLens to actively parse form targets, brand impersonation cues, and suspicious DOM structures in real time—delivering an evidence-backed score explaining exactly why a link is risky.
-          </p>
-
-          <div class="project-tech-line">
-            Built with <span>TypeScript</span> · <span>Chrome Extension API</span> · <span>Threat Intelligence</span> · <span>DOM Heuristics</span>
-          </div>
-
-          <details class="build-details">
-            <summary>
-              <span>Behind the build</span>
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div class="build-notes">
-              Engineered under Chrome's strict Manifest V3 service-worker constraints. Combines lightweight local threat signatures with heuristic analysis of login inputs and form submission targets to keep evaluation under 50ms without degrading page rendering.
-            </div>
-          </details>
-        </article>
-
-        <!-- Project 4: CyberSurfaceMapper -->
-        <article class="project-entry" id="project-mapper" data-category="security">
-          <div class="project-entry-top">
-            <div class="project-title-wrap">
-              <a href="https://github.com/saumitg26/CyberSurfaceMapper" target="_blank" rel="noopener noreferrer" class="project-name">CyberSurfaceMapper</a>
-              <span class="project-tagline">Security Reconnaissance</span>
-            </div>
-            <a href="https://github.com/saumitg26/CyberSurfaceMapper" target="_blank" rel="noopener noreferrer" class="project-link-clean">
-              <span>View Repository</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <p class="project-story">
-            An automated reconnaissance dashboard written in Python to evaluate the exposure of public domains. Pairs non-intrusive HTTP security header auditing (CSP, HSTS, X-Frame) with multi-threaded port probing to provide a clear, actionable posture summary.
-          </p>
-
-          <div class="project-tech-line">
-            Built with <span>Python</span> · <span>Streamlit</span> · <span>Network Sockets</span> · <span>Security Auditing</span>
-          </div>
-
-          <details class="build-details">
-            <summary>
-              <span>Behind the build</span>
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div class="build-notes">
-              Built to replace fragmented CLI lookups with an integrated interface. Uses asynchronous socket connections with strict timeouts to scan common service ports without hanging, then correlates findings with missing defensive headers to score risk.
-            </div>
-          </details>
-        </article>
-
-        <!-- Project 5: PatriotGo -->
-        <article class="project-entry" id="project-patriotgo" data-category="mobile">
-          <div class="project-entry-top">
-            <div class="project-title-wrap">
-              <a href="https://github.com/saumitg26/PatriotGo" target="_blank" rel="noopener noreferrer" class="project-name">PatriotGo</a>
-              <span class="project-tagline tag-blue">Campus Mobility · PatriotHacks</span>
-            </div>
-            <a href="https://github.com/saumitg26/PatriotGo" target="_blank" rel="noopener noreferrer" class="project-link-clean">
-              <span>View Repository</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <p class="project-story">
-            George Mason has a huge commuter population with parking bottlenecks. We built PatriotGo during PatriotHacks—a campus ridesharing app with verified GMU university authentication, live ride posts, eco-tracking, and real-time student messaging.
-          </p>
-
-          <div class="project-tech-line">
-            Built with <span>React Native</span> · <span>Expo</span> · <span>Supabase</span> · <span>Realtime DB</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Awards Section (Interactive Competitive Timeline) -->
-    <section class="section" id="awards">
-      <div class="container">
-        <div class="section-marker">02 / COMPETITION AWARDS</div>
-        <div class="section-head">
-          <h2>Awards & Recognition</h2>
-          <p>Verified competitive placements and honors across cloud systems and cybersecurity.</p>
-        </div>
-
-        <!-- Interactive Timeline -->
-        <div class="timeline-wrap">
-          <div class="timeline-axis" aria-hidden="true"></div>
-
-          <div class="timeline-items">
-            <!-- Timeline Item 1: AWS Maximus -->
-            <article class="timeline-item" id="award-maximus">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-dot glow-emerald"></span>
-              </div>
-
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-line">
-                    <span class="timeline-badge badge-emerald">GLOBAL TOP 4</span>
-                    <span class="timeline-year">2025 // HACKATHON</span>
-                  </div>
-                  <h3 class="timeline-title">🏆 4th Place Globally — AWS Maximus Hackathon</h3>
-                  <div class="timeline-org">AWS Maximus Global Government Hackathon · Cloud & GovTech</div>
-                </div>
-
-                <p class="timeline-narrative">
-                  Placed 4th out of hundreds of international collegiate and professional teams. Designed and demonstrated <strong>MissionPay Guard</strong>, an automated fraud-screening and payment auditing pipeline evaluated by senior AWS solution architects and public-sector tech leadership.
-                </p>
-
-                <div class="timeline-metrics">
-                  <span class="metric-pill">4th Place Worldwide</span>
-                  <span class="metric-pill">Evaluated by Senior AWS Architects</span>
-                  <span class="metric-pill">Serverless State Machines</span>
-                  <span class="metric-pill">Pre-Disbursement Audit</span>
-                </div>
-
-                <details class="timeline-details">
-                  <summary class="timeline-summary">
-                    <span>Technical Evaluation & Scope</span>
-                    <span class="summary-toggle-icon" aria-hidden="true">+</span>
-                  </summary>
-                  <div class="timeline-details-body">
-                    <p>
-                      Built on AWS Lambda, Step Functions, and DynamoDB. The pipeline intercepts treasury disbursement feeds, executes sub-second document and entity checks, and flags anomalous transactions for human auditor sign-off before state funds leave the treasury.
-                    </p>
-                    <a href="#project-missionpay" class="timeline-jump-btn" data-project-target="project-missionpay">
-                      <span>Jump to MissionPay Guard in Projects</span>
-                      <span aria-hidden="true">↘</span>
-                    </a>
-                  </div>
-                </details>
-              </div>
-            </article>
-
-            <!-- Timeline Item 2: CyberPatriot -->
-            <article class="timeline-item" id="award-cyberpatriot">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-dot glow-blue"></span>
-              </div>
-
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-line">
-                    <span class="timeline-badge badge-blue">NATIONAL SEMIFINALS</span>
-                    <span class="timeline-year">PLATINUM DIVISION</span>
-                  </div>
-                  <h3 class="timeline-title">🛡️ CyberPatriot Platinum Semifinalist</h3>
-                  <div class="timeline-org">National Youth Cyber Defense Competition · Platinum Tier</div>
-                </div>
-
-                <p class="timeline-narrative">
-                  Reached the elite Platinum Semifinal tier in the national CyberPatriot defensive security challenge. Conducted forensic vulnerability audits, defensive OS hardening, and security policy enforcement across Linux and Windows server environments.
-                </p>
-
-                <div class="timeline-metrics">
-                  <span class="metric-pill">Platinum Division (Top Tier)</span>
-                  <span class="metric-pill">Linux & Windows Server Hardening</span>
-                  <span class="metric-pill">Forensic Backdoor Discovery</span>
-                  <span class="metric-pill">CIS Benchmark Audits</span>
-                </div>
-
-                <details class="timeline-details">
-                  <summary class="timeline-summary">
-                    <span>Technical Evaluation & Scope</span>
-                    <span class="summary-toggle-icon" aria-hidden="true">+</span>
-                  </summary>
-                  <div class="timeline-details-body">
-                    <p>
-                      Conducted under strict timed competition conditions. Identified and neutralized unauthorized services, secured SSH/PAM configurations, repaired corrupt file permissions, configured strict iptables/firewall rules, and audited user accounts for privilege escalation vectors.
-                    </p>
-                    <a href="#project-mapper" class="timeline-jump-btn" data-project-target="project-mapper">
-                      <span>Jump to CyberSurfaceMapper in Projects</span>
-                      <span aria-hidden="true">↘</span>
-                    </a>
-                  </div>
-                </details>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack (Interactive Arsenal with Live Relationship Inspector) -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-marker">03 / TECHNICAL ARSENAL</div>
-        <div class="section-head">
-          <h2>Technologies & Systems</h2>
-          <p>Languages, cloud infrastructure, and security frameworks applied in competition and production.</p>
-        </div>
-
-        <!-- Interactive Category Switcher -->
-        <div class="tech-filter-nav" role="tablist" aria-label="Technology filter">
-          <button class="tech-tab active" data-tech-filter="all" role="tab" aria-selected="true">All (24)</button>
-          <button class="tech-tab" data-tech-filter="languages" role="tab" aria-selected="false">Languages (6)</button>
-          <button class="tech-tab" data-tech-filter="cloud" role="tab" aria-selected="false">Backend & Cloud (7)</button>
-          <button class="tech-tab" data-tech-filter="ai-sec" role="tab" aria-selected="false">AI & Security (6)</button>
-          <button class="tech-tab" data-tech-filter="frontend" role="tab" aria-selected="false">Frontend & Mobile (5)</button>
-        </div>
-
-        <!-- Interactive Tech Badges Grid -->
-        <div class="tech-grid" id="techGrid">
-          <!-- Languages -->
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="python" data-name="Python" data-tag="PRIMARY LANGUAGE" data-desc="Primary backend language used for cloud microservices, ML pipelines, and socket recon tools." data-target="project-mapper">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">Python</span>
-            <span class="tech-role">PRIMARY</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="typescript" data-name="TypeScript" data-tag="FULL-STACK & EXTENSIONS" data-desc="Strictly typed browser DOM heuristics in PhishLens and event handling in MissionPay Guard." data-target="project-phishlens">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">TypeScript</span>
-            <span class="tech-role">FULL-STACK</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="java" data-name="Java" data-tag="OOP & ALGORITHMS" data-desc="Object-oriented systems architecture, data structures, and algorithmic foundations at George Mason." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">Java</span>
-            <span class="tech-role">OOP / DSA</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="javascript" data-name="JavaScript" data-tag="ES6+ / BROWSER RUNTIME" data-desc="Modern asynchronous ES6+ web APIs, DOM mutation observers, and browser extension scripting." data-target="project-phishlens">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">JavaScript</span>
-            <span class="tech-role">ES6+</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="sql" data-name="SQL" data-tag="RELATIONAL SCHEMAS" data-desc="Relational query design, indexing, and schema migrations across PostgreSQL and Supabase." data-target="project-triage">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">SQL</span>
-            <span class="tech-role">RELATIONAL</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="languages" data-tech-id="r" data-name="R" data-tag="DATA ANALYSIS" data-desc="Statistical computation, probability modeling, and data distribution analysis at GMU." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">R</span>
-            <span class="tech-role">STATS</span>
-          </button>
-
-          <!-- Backend & Cloud -->
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="aws-lambda" data-name="AWS Lambda" data-tag="SERVERLESS COMPUTE" data-desc="Serverless compute engine orchestrating fraud anomaly scoring in MissionPay Guard (4th Place Global AWS Maximus)." data-target="project-missionpay">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">AWS Lambda</span>
-            <span class="tech-role">SERVERLESS</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="step-functions" data-name="AWS Step Functions" data-tag="STATE MACHINES" data-desc="State machine orchestrating concurrent validation and human review hold-states in MissionPay Guard." data-target="project-missionpay">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">Step Functions</span>
-            <span class="tech-role">STATE MACHINES</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="dynamodb" data-name="AWS DynamoDB" data-tag="NOSQL KEY-VALUE" data-desc="High-throughput NoSQL state persistence with optimistic locking for fraud audit records in MissionPay Guard." data-target="project-missionpay">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">DynamoDB</span>
-            <span class="tech-role">NOSQL</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="fastapi" data-name="FastAPI" data-tag="ASYNC PYTHON" data-desc="High-throughput asynchronous Python REST endpoints and inference serving in TriageAI." data-target="project-triage">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">FastAPI</span>
-            <span class="tech-role">ASYNC REST</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="postgresql" data-name="PostgreSQL" data-tag="RELATIONAL DATABASE" data-desc="Relational storage and clinician override audit trails for emergency triage queues in TriageAI." data-target="project-triage">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">PostgreSQL</span>
-            <span class="tech-role">DATABASE</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="supabase" data-name="Supabase" data-tag="REALTIME & AUTH" data-desc="Realtime database subscriptions, Row-Level Security (RLS), and GMU campus auth in PatriotGo." data-target="project-patriotgo">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Supabase</span>
-            <span class="tech-role">REALTIME</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="cloud" data-tech-id="nodejs" data-name="Node.js" data-tag="JAVASCRIPT RUNTIME" data-desc="Event-driven runtime for microservices, build pipelines, and CLI automation." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">Node.js</span>
-            <span class="tech-role">RUNTIME</span>
-          </button>
-
-          <!-- AI & Security -->
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="gemini" data-name="Gemini AI" data-tag="CLINICAL REASONING" data-desc="Multi-modal clinical reasoning for contact-free triage and explainable ESI priority scoring in TriageAI." data-target="project-triage">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Gemini AI</span>
-            <span class="tech-role">LLM REASONING</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="presage" data-name="Presage SDK" data-tag="COMPUTER VISION" data-desc="Contact-free camera vitals extraction (heart rate, SpO2) integrated into emergency hospital workflow in TriageAI." data-target="project-triage">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Presage SDK</span>
-            <span class="tech-role">COMPUTER VISION</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="threat-intel" data-name="Threat Intelligence" data-tag="DEFENSIVE SECURITY" data-desc="Real-time URL reputation, domain heuristic analysis, and brand impersonation detection in PhishLens." data-target="project-phishlens">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Threat Intelligence</span>
-            <span class="tech-role">DEFENSIVE</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="sockets" data-name="Network Sockets" data-tag="SOCKET RECON" data-desc="Low-level multi-threaded asynchronous port scanning and security header auditing in CyberSurfaceMapper." data-target="project-mapper">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Network Sockets</span>
-            <span class="tech-role">NETWORKING</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="linux" data-name="Linux" data-tag="OS HARDENING" data-desc="OS hardening, PAM authentication policies, and vulnerability auditing in CyberPatriot Platinum Semifinals." data-target="award-cyberpatriot">
-            <span class="tech-dot dot-emerald"></span>
-            <span class="tech-name">Linux</span>
-            <span class="tech-role">SYSTEMS & SECURITY</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="ai-sec" data-tech-id="git" data-name="Git & GitHub" data-tag="VERSION CONTROL" data-desc="Branching strategy, pull requests, automated GitHub Pages deployment, and CI pipelines." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">Git & GitHub</span>
-            <span class="tech-role">VERSION CONTROL</span>
-          </button>
-
-          <!-- Frontend & Mobile -->
-          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="react" data-name="React" data-tag="FRONTEND ARCHITECTURE" data-desc="Component architecture, custom hooks, and state management for TriageAI clinician dashboard." data-target="project-triage">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">React</span>
-            <span class="tech-role">FRONTEND</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="react-native" data-name="React Native" data-tag="CROSS-PLATFORM MOBILE" data-desc="Cross-platform iOS & Android rideshare client built for George Mason students in PatriotGo." data-target="project-patriotgo">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">React Native</span>
-            <span class="tech-role">MOBILE</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="expo" data-name="Expo" data-tag="MOBILE FRAMEWORK" data-desc="Mobile development framework, EAS build pipeline, and device sensors for PatriotGo." data-target="project-patriotgo">
-            <span class="tech-dot dot-blue"></span>
-            <span class="tech-name">Expo</span>
-            <span class="tech-role">MOBILE SDK</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="tailwind" data-name="Tailwind CSS" data-tag="UTILITY-FIRST" data-desc="Responsive utility-first layouts and accessible styling in modern web applications." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">Tailwind CSS</span>
-            <span class="tech-role">UTILITY CSS</span>
-          </button>
-
-          <button type="button" class="tech-chip" data-tech-cat="frontend" data-tech-id="figma" data-name="Figma" data-tag="UI/UX DESIGN" data-desc="User flow wireframing, component tokens, and interactive mockups before writing production code." data-target="">
-            <span class="tech-dot dot-muted"></span>
-            <span class="tech-name">Figma</span>
-            <span class="tech-role">UI/UX</span>
-          </button>
-        </div>
-
-        <!-- Live Tech Inspector Bar -->
-        <div class="tech-inspector" id="techInspector">
-          <div class="inspector-status">
-            <span class="inspector-pulse" aria-hidden="true"></span>
-            <span class="inspector-status-title">SYSTEM LINKAGE INSPECTOR</span>
-            <span class="inspector-status-hint">HOVER OR CLICK ANY TECH BADGE</span>
-          </div>
-          <div class="inspector-content">
-            <div class="inspector-header">
-              <span class="inspector-name" id="inspectorName">Select a technology above</span>
-              <span class="inspector-tag" id="inspectorTag" style="display: none;"></span>
-            </div>
-            <p class="inspector-desc" id="inspectorDesc">
-              Hover over or tap any technology above to see where Saumit applied it across hackathon-winning architectures, production systems, and security tooling.
-            </p>
-            <div class="inspector-action" id="inspectorAction" style="display: none;">
-              <a href="#projects" class="inspector-jump-btn" id="inspectorJumpBtn">
-                <span id="inspectorJumpText">Jump to Related Project</span>
-                <span aria-hidden="true">↘</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Connect -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-clean">
-          <div class="section-marker">04 / CONNECT</div>
-          <h3>Let's build something.</h3>
-          <p>
-            Always down to talk systems architecture, hackathons, or new projects. Drop a note anytime.
-          </p>
-
-          <div class="contact-links-inline">
-            <button class="copy-email-btn" type="button">
-              <span>write2saumitg@gmail.com</span>
-              <span aria-hidden="true">↗</span>
-            </button>
-            <a href="https://www.linkedin.com/in/saumit-guduguntla/" target="_blank" rel="noopener noreferrer">
-              <span>LinkedIn</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a href="https://github.com/saumitg26" target="_blank" rel="noopener noreferrer">
-              <span>GitHub</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-wrap">
-      <div>
-        <span>Saumit Guduguntla · George Mason University</span>
-      </div>
-      <div>
-        <span>&copy; <span id="year">2026</span> All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notification -->
-  <div class="toast-container" aria-live="polite">
-    <div class="toast" id="toast">
-      <span style="color: var(--emerald);">✓</span>
-      <span class="toast-text">Copied write2saumitg@gmail.com to clipboard!</span>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#080b10" name="theme-color"/><meta content="Saumit Guduguntla — selected software projects in AI, cloud systems, and human-centered workflows." name="description"/><title>Saumit Guduguntla — Selected Work</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080b10;--ink:#edf0f3;--dim:#8f9aa8;--line:rgba(218,230,245,.14);--blue:#90c9ff;--font:'Space Grotesk',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#aacdff;color:#08111e}.skip{position:absolute;top:-100px;left:20px;z-index:20;background:#fff;color:#111;padding:12px}.skip:focus{top:20px}.noise{pointer-events:none;position:fixed;inset:0;z-index:10;opacity:.09;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 160 160%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.75%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.28%22/%3E%3C/svg%3E')}.topbar{height:77px;position:fixed;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(20px,4.6vw,88px);z-index:9;border-bottom:1px solid var(--line);background:rgba(8,11,16,.81);backdrop-filter:blur(20px)}.brand{font:700 22px var(--font);letter-spacing:-.09em}.brand span{color:var(--blue)}.nav{display:flex;align-items:center;gap:35px}.nav a{font:500 11px var(--font);letter-spacing:.14em;color:#d0d8e1;transition:color .2s}.nav a:hover,.nav a:focus-visible{color:var(--blue)}.nav .contact-link{border:1px solid rgba(213,226,241,.28);padding:12px 17px;border-radius:3px}.eyebrow,.micro,.image-credit,.stackline,.index-mark,.footer-meta{font:500 11px var(--font);letter-spacing:.16em;text-transform:uppercase}.muted{color:var(--dim)}.hero{min-height: min(940px,100svh);padding:clamp(125px,15vh,190px) clamp(22px,7.7vw,145px) 75px;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse 58% 68% at 75% 49%,rgba(40,73,113,.20),transparent 72%),linear-gradient(165deg,#090e15 6%,#0b111d 55%,#080b10)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(144,201,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(144,201,255,.035) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(90deg,transparent 8%,black 85%);z-index:-1}.hero:after{content:'';position:absolute;right:-15%;top:4%;width:65vw;height:65vw;max-width:900px;max-height:900px;border:1px solid rgba(143,192,244,.13);border-radius:50%;box-shadow:0 0 0 85px rgba(131,180,232,.025),0 0 0 170px rgba(131,180,232,.016),inset 0 0 160px rgba(35,79,128,.08);pointer-events:none;z-index:-1}.hero-top{display:flex;align-items:center;gap:15px;color:#aab6c6;margin-bottom:35px}.hero-top .dash{height:1px;width:36px;background:var(--blue)}.hero h1{font:600 clamp(62px,11.2vw,170px)/.85 var(--font);letter-spacing:-.095em;text-transform:uppercase;margin:0;max-width:1100px}.hero h1 span{display:block}.hero h1 span:last-child{color:transparent;-webkit-text-stroke:1px rgba(224,232,241,.75)}.hero-lower{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-top:52px}.hero-desc{font-size:clamp(16px,1.7vw,22px);line-height:1.5;color:#acb9c8;max-width:470px;margin:0}.hero-desc b{color:#e8eef6;font-weight:500}.round-arrow{height:75px;width:75px;border:1px solid rgba(171,206,245,.35);display:grid;place-items:center;border-radius:50%;font-size:29px;transition:background .25s,color .25s,transform .25s}.round-arrow:hover{background:var(--blue);color:#08111b;transform:translateY(5px)}.hero-bottom{position:absolute;bottom:34px;left:clamp(22px,7.7vw,145px);right:clamp(22px,7.7vw,145px);display:flex;justify-content:space-between;color:#778699}.projects-intro{padding:115px clamp(22px,7.7vw,145px) 80px;display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:end;border-top:1px solid var(--line)}.projects-intro h2{font:600 clamp(48px,7.2vw,115px)/.9 var(--font);letter-spacing:-.075em;margin:12px 0 0}.projects-intro p{color:#a5b3c3;line-height:1.65;max-width:400px;margin:0 0 5px auto;font-size:17px}.project{padding:35px clamp(22px,7.7vw,145px) clamp(105px,12vw,190px);position:relative;isolation:isolate}.project::before{content:'';inset:0;position:absolute;z-index:-1;background:radial-gradient(ellipse 52% 59% at 37% 44%,color-mix(in srgb,var(--project-accent) 10%,transparent),transparent 77%);opacity:.7}.project-head{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:15px;color:#c1ccd9}.project-main{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(40px,6vw,115px);margin-top:42px;align-items:center}.project:nth-of-type(even) .project-visual{order:2}.project:nth-of-type(even) .project-copy{order:1}.project-visual{min-width:0}.image-shell{height:clamp(320px,38vw,610px);position:relative;overflow:hidden;background:#111824;border:1px solid rgba(191,207,228,.17);box-shadow:0 33px 90px rgba(0,0,0,.25)}.image-shell img{display:block;width:100%;height:100%;object-fit:cover;position:relative;z-index:2;filter:saturate(.85) contrast(1.08);transition:transform .75s ease,filter .6s}.project:hover .image-shell img{transform:scale(1.035);filter:saturate(1) contrast(1.05)}.image-sheen{pointer-events:none;position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(9,16,26,.02),rgba(5,9,16,.27));mix-blend-mode:multiply}.image-fallback{position:absolute;inset:0;display:flex;align-items:start;justify-content:end;flex-direction:column;padding:35px;background:radial-gradient(circle at 75% 20%,color-mix(in srgb,var(--project-accent) 17%,transparent),transparent 60%),#101822}.image-fallback span{font-size:11px;letter-spacing:.19em;color:var(--project-accent)}.image-fallback strong{font:600 clamp(40px,5vw,76px)/.95 var(--font);letter-spacing:-.07em;margin:16px 0}.image-fallback small{color:#8a99aa}.image-credit{display:block;color:#7e8c9d;margin-top:16px;font-size:9px;letter-spacing:.12em}.project-copy{position:relative}.index-mark{color:var(--project-accent);margin-bottom:24px}.index-mark span{color:#57687b}.project h3{font:600 clamp(46px,5.7vw,92px)/.93 var(--font);letter-spacing:-.075em;margin:0 0 22px;max-width:580px}.project h4{font:500 clamp(19px,2vw,28px)/1.2 var(--font);letter-spacing:-.04em;margin:0 0 24px;color:var(--project-accent)}.description{font-size:clamp(15px,1.15vw,18px);line-height:1.75;color:#c2cbd6;margin:0 0 16px}.role{color:#8493a6;font-size:13px;line-height:1.75;margin:0 0 30px}.stackline{border-top:1px solid var(--line);padding-top:18px;color:#8c9bad;line-height:1.9;font-size:10px;letter-spacing:.1em}.project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin-top:30px}.project-link{font:600 11px var(--font);letter-spacing:.1em;border-bottom:1px solid var(--project-accent);padding-bottom:13px;color:var(--ink);transition:color .2s}.project-link span{color:var(--project-accent);font-size:18px;margin-left:14px}.project-link:hover{color:var(--project-accent)}.secondary-link{color:#a6b7ca;font:600 11px var(--font);letter-spacing:.12em}.secondary-link:hover{color:var(--project-accent)}.outro{padding:140px clamp(22px,7.7vw,145px) 65px;background:radial-gradient(ellipse 70% 110% at 80% 10%,rgba(63,107,162,.17),transparent),#0c121b;border-top:1px solid var(--line)}.outro h2{font:600 clamp(54px,9vw,145px)/.9 var(--font);letter-spacing:-.08em;margin:35px 0 70px;max-width:1200px}.outro h2 em{font-style:normal;color:var(--blue)}.outro-links{display:flex;flex-wrap:wrap;gap:12px 45px}.outro-links a{font:500 15px var(--font);padding-bottom:11px;border-bottom:1px solid rgba(165,196,234,.3);transition:color .2s}.outro-links a:hover{color:var(--blue)}.outro-links span{margin-left:25px;color:var(--blue)}footer{padding:30px clamp(22px,7.7vw,145px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#75869a;border-top:1px solid var(--line)}.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}a:focus-visible{outline:2px solid var(--blue);outline-offset:5px}@media(max-width:950px){.project-main{grid-template-columns:1fr;gap:35px}.project:nth-of-type(even) .project-visual,.project:nth-of-type(even) .project-copy{order:initial}.image-shell{height:min(65vw,500px)}.projects-intro{grid-template-columns:1fr}.projects-intro p{margin:8px 0 0}.project h3{font-size:clamp(48px,8vw,80px)}}@media(max-width:640px){.topbar{height:68px}.nav{gap:18px}.nav a{font-size:10px}.nav .contact-link{padding:10px}.hero{min-height:710px;min-height:100svh;padding-top:125px;padding-bottom:95px}.hero h1{font-size:clamp(59px,14vw,94px)}.hero-lower{margin-top:32px;align-items:start}.round-arrow{height:54px;width:54px;flex-shrink:0}.hero-bottom{bottom:24px}.projects-intro{padding-top:90px}.project{padding-bottom:95px}.project-head{flex-direction:column;gap:8px}.image-shell{height:67vw;min-height:265px}.outro{padding-top:100px}.outro h2{margin-bottom:55px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.image-shell img,.round-arrow{transition:none}}
+
+
+/* UX overhaul: compact, readable, deliberately low-friction */
+html{scroll-padding-top:98px}body{overflow-x:clip}
+:root{--reading:clamp(17px,1.2vw,19px)}
+.topbar{z-index:50}
+.reading-progress{position:fixed;top:76px;left:0;right:0;height:2px;z-index:51;pointer-events:none}
+.reading-progress span{display:block;width:100%;height:100%;background:var(--blue);transform:scaleX(0);transform-origin:left}
+.nav-current{font:500 10px var(--font);letter-spacing:.14em;color:#71879f}
+.nav a[aria-current="location"]{color:var(--blue)}
+.nav-locator{display:none}
+.hero{min-height:min(770px,90svh);padding-top:145px;padding-bottom:96px}
+.hero h1{font-size:clamp(60px,10.7vw,154px)}
+.hero-lower{align-items:end;gap:26px;flex-wrap:wrap;margin-top:49px}
+.hero-desc{max-width:480px;font-size:clamp(17px,1.7vw,21px)}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.primary-cta,.quiet-cta{display:inline-flex;gap:26px;align-items:center;justify-content:space-between;min-height:50px;padding:14px 20px;border:1px solid var(--blue);font:600 11px var(--font);letter-spacing:.1em}
+.primary-cta{color:#07111c;background:var(--blue)}.quiet-cta{border-color:rgba(185,210,239,.26);color:#dde8f4}
+.primary-cta:hover{background:#c6e5ff}.quiet-cta:hover{border-color:var(--blue);color:var(--blue)}
+.primary-cta:focus-visible,.quiet-cta:focus-visible{outline:2px solid white;outline-offset:4px}
+.hero-bottom{font-size:10px}
+.projects-intro{padding-top:100px;padding-bottom:65px;row-gap:35px}
+.projects-intro h2{font-size:clamp(53px,6.8vw,105px)}
+.editorial-index{grid-column:1/-1;display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);margin-top:22px}
+.editorial-index a{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(100px,220px) 20px;gap:16px;align-items:center;padding:22px 10px;border-bottom:1px solid var(--line);transition:background .2s,color .2s}
+.editorial-index a>span{color:#70849b;font:500 11px var(--font)}
+.editorial-index strong{font:500 clamp(21px,2.4vw,32px)/1.1 var(--font);letter-spacing:-.045em}
+.editorial-index small{color:#8295a9;font:500 10px var(--font);letter-spacing:.12em}
+.editorial-index b{color:var(--blue);font-weight:500;font-size:20px}
+.editorial-index a:hover,.editorial-index a:focus-visible{background:rgba(144,201,255,.055);padding-left:20px}
+.editorial-index a[aria-current="location"] strong{color:var(--blue)}
+.project{padding-top:35px;padding-bottom:clamp(85px,9vw,145px);scroll-margin-top:88px}
+.project-main{align-items:start;gap:clamp(32px,5vw,88px)}
+.project:nth-of-type(even) .project-visual{order:2}.project:nth-of-type(even) .project-copy{order:1}
+.project h3{font-size:clamp(47px,5.2vw,83px);margin-bottom:13px}
+.project h4{font-size:clamp(19px,1.85vw,26px);margin-bottom:24px}
+.project-head{padding-top:20px}
+.project-visual{position:sticky;top:118px}
+.image-shell{height:clamp(300px,36vw,580px);border-color:rgba(191,207,228,.22)}
+.image-shell img{filter:saturate(.93) contrast(1.02);opacity:0}.image-shell img.loaded{opacity:1}
+.project:hover .image-shell img{transform:none;filter:saturate(.93) contrast(1.02)}
+.image-shell img[hidden]{display:none!important}
+.image-shell:has(img[hidden]) .image-sheen{display:none}
+.image-expand{position:absolute;bottom:16px;right:16px;z-index:5;padding:13px 16px;min-height:44px;border:1px solid rgba(230,241,255,.4);background:rgba(7,13,21,.86);backdrop-filter:blur(12px);cursor:pointer;color:#fff;font:600 10px var(--font);letter-spacing:.1em}
+.image-expand span{font-size:16px;margin-left:15px}.image-expand:hover{border-color:var(--project-accent);background:#122237}
+.image-expand[hidden]{display:none}
+.image-fallback strong{font-size:clamp(27px,3vw,44px);line-height:1.03;letter-spacing:-.035em;max-width:90%}.image-fallback small{font-size:12px;line-height:1.6;max-width:260px}.image-expand:not(:has(+ img.loaded)){display:none}
+.project-story{margin:20px 0 26px;border-top:1px solid var(--line)}
+.story-row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+.story-label{color:var(--project-accent);font:600 10px/1.7 var(--font);letter-spacing:.06em;text-transform:uppercase}
+.story-row p{font:400 clamp(14px,1.07vw,16px)/1.65 'DM Sans',sans-serif;color:#c2ceda;margin:0;max-width:520px}
+.tool-line{font:500 10px/1.9 var(--font);color:#8c9dad;letter-spacing:.06em;margin:23px 0}
+.tool-line span{font:600 10px var(--font);color:#b2c2d3;letter-spacing:.1em;margin-right:18px}
+.project-actions{margin-top:28px;gap:16px 25px}
+.project-link,.secondary-link{min-height:44px;display:inline-flex;align-items:center}
+.image-credit{line-height:1.5}
+.work-traverse:not([hidden]){position:fixed;right:clamp(15px,2vw,35px);bottom:clamp(22px,3vw,40px);z-index:30;display:flex;align-items:center;gap:0;background:rgba(10,16,25,.95);border:1px solid rgba(173,204,241,.25);box-shadow:0 16px 45px rgba(0,0,0,.3);backdrop-filter:blur(12px)}
+.work-traverse[hidden]{display:none!important}
+.traverse-label{padding:0 17px;font:600 10px var(--font);color:#c8d4e0;letter-spacing:.08em;white-space:nowrap}
+.work-traverse a{display:grid;place-items:center;width:48px;height:48px;border-left:1px solid rgba(173,204,241,.25);font-size:18px;color:#e9f3ff}
+.work-traverse a:hover,.work-traverse a:focus-visible{background:var(--blue);color:#07101a}
+.outro{padding-top:110px;padding-bottom:85px}.outro-links .copy-email{font:500 13px var(--font);letter-spacing:.09em;padding:0 0 11px;border:0;border-bottom:1px solid rgba(165,196,234,.3);color:inherit;background:none;cursor:pointer}
+.outro-links .copy-email:hover{color:var(--blue)}
+.image-viewer{max-width:min(92vw,1250px);max-height:92dvh;width:max-content;padding:0;background:#0a1018;border:1px solid rgba(176,202,233,.4);color:#f4f8ff;box-shadow:0 30px 110px #000;overflow:auto}
+.image-viewer::backdrop{background:rgba(2,5,10,.88);backdrop-filter:blur(12px)}
+.viewer-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 22px;border-bottom:1px solid var(--line);font:500 11px var(--font);letter-spacing:.11em}.viewer-close{cursor:pointer;min-height:42px;color:#fff;background:none;border:1px solid var(--line);padding:9px 15px}.viewer-close span{font-size:20px;margin-left:12px;color:var(--blue)}
+#viewer-img{display:block;max-height:72dvh;max-width:100%;width:auto;margin:auto;object-fit:contain}#viewer-caption{padding:0 22px 17px;color:#9bacbd;font:500 10px var(--font);letter-spacing:.12em}
+.sr-only{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+.reveal{opacity:1;transform:none}.has-reveal .reveal:not(.visible){opacity:0;transform:translateY(16px)}
+.image-expand:focus-visible,.viewer-close:focus-visible,.copy-email:focus-visible,.editorial-index a:focus-visible,.work-traverse a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:1050px){.project-visual{position:static}.project-main{grid-template-columns:1fr}.project:nth-of-type(even) .project-visual,.project:nth-of-type(even) .project-copy{order:initial}.image-shell{height:min(60vw,500px)}.story-row{grid-template-columns:120px 1fr}}
+@media(max-width:640px){.reading-progress{top:67px}.nav-current{display:none}.hero{min-height:690px;min-height:90svh;padding:125px 22px 105px}.hero h1{font-size:clamp(52px,13.2vw,90px)}.hero-lower{align-items:start;margin-top:29px}.hero-desc{font-size:17px}.hero-actions{width:100%}.primary-cta{flex:1}.hero-bottom{bottom:22px}.hero-bottom span:last-child{display:none}.projects-intro{padding-top:78px;padding-bottom:45px}.editorial-index a{grid-template-columns:30px minmax(0,1fr) 16px;gap:12px;padding:19px 0}.editorial-index small{display:none}.editorial-index a:hover{padding-left:7px}.project{padding-bottom:78px}.project-main{margin-top:25px;gap:26px}.project-head{flex-direction:column;gap:6px}.image-shell{height:66vw;min-height:245px}.project h3{font-size:clamp(45px,10vw,66px)}.story-row{grid-template-columns:1fr;gap:6px;padding:14px 0}.story-row p{font-size:15px;color:#cdd7e2}.work-traverse:not([hidden]){display:none}.traverse-label{font-size:9px;padding:0 12px}.work-traverse a{height:44px;width:43px}.outro{padding-top:82px}.image-viewer{max-width:96vw;max-height:94dvh}.viewer-top{padding:12px}.viewer-top>span{font-size:9px}.viewer-close{padding:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.has-reveal .reveal:not(.visible){opacity:1;transform:none}.editorial-index a,.image-expand{transition:none}}
+
+/* Image-free editorial panels: preserves the original Darkmoon layout. */
+.project-pane {
+  height:clamp(320px,38vw,610px); display:flex; flex-direction:column;
+  justify-content:space-between; padding:clamp(24px,3vw,42px);
+  position:relative; isolation:isolate; overflow:hidden; min-width:0;
+  background:radial-gradient(ellipse at 72% 18%,color-mix(in srgb,var(--pane-accent) 15%,transparent),transparent 48%),
+    linear-gradient(145deg,#111924 0%,#0d131c 55%,#0b1018 100%);
+  border:1px solid color-mix(in srgb,var(--pane-accent) 25%,rgba(191,207,228,.12));
+  box-shadow:0 33px 90px rgba(0,0,0,.25);
+}
+.project-pane::before {
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(90deg,transparent 97%,rgba(255,255,255,.05) 98%),
+             linear-gradient(transparent 97%,rgba(255,255,255,.05) 98%);
+  background-size:60px 60px; opacity:.17;
+  mask-image:linear-gradient(135deg,#000,transparent 80%);
+}
+.project-pane::after {
+  content:""; position:absolute; right:-14%; bottom:-47%;
+  width:72%; aspect-ratio:1; border:1px solid color-mix(in srgb,var(--pane-accent) 35%,transparent);
+  border-radius:50%; box-shadow:0 0 0 62px rgba(255,255,255,.012),0 0 0 122px rgba(255,255,255,.008);
+  opacity:.52; pointer-events:none;
+}
+.pane-top {
+  display:flex; align-items:center; gap:12px;
+  font:600 12px var(--font); letter-spacing:.17em; color:var(--pane-accent);
+}
+.pane-top::before {content:""; width:22px; height:1px; background:currentColor}
+.pane-middle {max-width:85%; position:relative; z-index:1}
+.pane-headline {
+  font-family:var(--font); font-size:clamp(32px,4vw,58px); font-weight:600;
+  line-height:1.07; letter-spacing:-.055em; color:#f0f4fb; margin:0 0 30px;
+}
+.pane-flow {display:flex; flex-wrap:wrap; align-items:center; gap:8px}
+.pane-flow span {
+  display:inline-flex; align-items:center; min-height:34px;
+  padding:9px 11px; border:1px solid rgba(210,228,247,.16); color:#c2cfdf;
+  background:rgba(255,255,255,.025); font:600 10px var(--font);letter-spacing:.06em;
+}
+.pane-bottom {padding-top:18px;border-top:1px solid rgba(210,228,247,.18);display:flex;
+  justify-content:space-between;align-items:center;gap:16px;color:#aebccc;
+  font:500 12px var(--font);letter-spacing:.03em}
+.pane-marker {width:12px;height:12px;border:1px solid var(--pane-accent);transform:rotate(45deg)}
+@media(max-width:640px){
+  .project-pane {min-height:340px;height:auto; padding:25px}
+  .pane-middle{max-width:100%}
+  .pane-headline{font-size:clamp(30px,8vw,42px)}
+}
+</style></head><body><a class="skip" href="#main">SKIP TO CONTENT</a><div aria-hidden="true" class="noise"></div><div aria-hidden="true" class="reading-progress"><span id="reading-progress-bar"></span></div><header class="topbar"><a aria-label="Saumit, back to home" class="brand" href="#home">SG<span>↗</span></a><nav aria-label="Primary navigation" class="nav" id="primary-navigation"><span aria-live="off" class="nav-current">01 / WORK</span><a data-nav-target="work" href="#work">PROJECTS</a><a class="contact-link" data-nav-target="contact" href="#contact">LET'S CONNECT ↗</a></nav><span aria-hidden="true" class="nav-locator">WORK / 04</span></header>
+<main id="main"><section class="hero" id="home"><div class="hero-top eyebrow">INDEPENDENT + COLLABORATIVE ENGINEERING</div><h1><span>SAUMIT</span><span>GUDUGUNTLA</span></h1><div class="hero-lower"><p class="hero-desc">I design and build <b>software people can actually use</b> — from public-health tools to human-reviewed AI workflows.</p><div class="hero-actions"><a class="primary-cta" href="#project-01">EXPLORE PROJECTS <span aria-hidden="true">↘</span></a><a class="quiet-cta" href="https://github.com/saumitg26" rel="noopener noreferrer" target="_blank">GITHUB <span aria-hidden="true">↗</span></a></div></div><div class="hero-bottom eyebrow"><span>01 — 04 / SELECTED PROJECTS</span><span>SCROLL TO EXPLORE ↓</span></div></section>
+<section class="projects-intro" id="work"><div><span class="eyebrow muted">01 / THE WORK</span><h2>Selected<br/>projects.</h2></div><p>Four projects. Four different problems. Explore the thinking and work behind each build.</p><div aria-label="Project index" class="editorial-index">
+<a href="#project-01"><span>01</span><strong>PHACT</strong><small>EDUCATION + AI</small><b aria-hidden="true">↘</b></a>
+<a href="#project-02"><span>02</span><strong>MissionPay Guard</strong><small>PAYMENT OPERATIONS</small><b aria-hidden="true">↘</b></a>
+<a href="#project-03"><span>03</span><strong>AEGIS</strong><small>SAFETY + EVIDENCE</small><b aria-hidden="true">↘</b></a>
+<a href="#project-04"><span>04</span><strong>TriageAI</strong><small>HEALTHCARE WORKFLOWS</small><b aria-hidden="true">↘</b></a>
+</div></section>
+<article class="project phact" id="project-01" style="--project-accent:#90c9ff">
+<div class="project-head reveal"><span class="micro">/01   CURRICULUM INTELLIGENCE</span><span class="micro muted">AWS BREAKING BARRIERS · 2026</span></div>
+<div class="project-main">
+<div class="project-visual reveal"><div class="project-pane" style="--pane-accent:#90c9ff"><div class="pane-top">CURRICULUM SYSTEMS</div><div class="pane-middle"><p class="pane-headline">From syllabus to approved curriculum.</p><div aria-label="Project workflow" class="pane-flow"><span>01  UPLOAD</span><span>02  REVIEW</span><span>03  APPROVE</span></div></div><div class="pane-bottom"><span>22 CEPH competencies</span><span aria-hidden="true" class="pane-marker"></span></div></div></div>
+<div class="project-copy reveal" data-project-copy=""><h3>PHACT</h3><h4>Making curriculum review more human.</h4><div class="project-story"><div class="story-row"><span class="story-label">The problem</span><p>Faculty need a clearer way to update syllabi against public-health competencies without losing control of the final decisions.</p></div><div class="story-row"><span class="story-label">My contribution</span><p>Faculty and administrator UX, human review states, syllabus versioning flows, and feedback handling.</p></div><div class="story-row"><span class="story-label">The build</span><p>A team prototype with React, an AWS serverless architecture, Bedrock knowledge bases, and synthetic data.</p></div></div><p class="tool-line"><span>STACK</span>REACT / VITE / AWS LAMBDA / BEDROCK / DYNAMODB</p><div class="project-actions"><a class="project-link" href="https://github.com/NiikNiik/us-breaking-barriers-2026/tree/master/ASPPH/PHACT" rel="noopener noreferrer" target="_blank">EXPLORE TEAM REPOSITORY <span aria-hidden="true">↗</span></a></div></div></div></article>
+<article class="project mission" id="project-02" style="--project-accent:#d2b1ff">
+<div class="project-head reveal"><span class="micro">/02   CLOUD / PAYMENTS</span><span class="micro muted">AWS MAXIMUS HACKATHON · 4TH OF 30</span></div>
+<div class="project-main">
+<div class="project-visual reveal"><div class="project-pane" style="--pane-accent:#d2b1ff"><div class="pane-top">PAYMENT OPERATIONS</div><div class="pane-middle"><p class="pane-headline">A clearer path from intake to a decision.</p><div aria-label="Project workflow" class="pane-flow"><span>01  INTAKE</span><span>02  VALIDATE</span><span>03  APPROVE</span></div></div><div class="pane-bottom"><span>Frontend prototype</span><span aria-hidden="true" class="pane-marker"></span></div></div></div>
+<div class="project-copy reveal" data-project-copy=""><h3>MissionPay Guard</h3><h4>A clearer view of every approval.</h4><div class="project-story"><div class="story-row"><span class="story-label">The problem</span><p>Payment reviewers need to see intake records, risk signals, and approvals without switching between disconnected screens.</p></div><div class="story-row"><span class="story-label">What remains available</span><p>A React and TypeScript interface prototype. The original hackathon AWS resources are no longer accessible.</p></div><div class="story-row"><span class="story-label">The outcome</span><p>4th place among 30 teams at the AWS Maximus hackathon. The public repository should be viewed as a UI prototype, not a live cloud service.</p></div></div><p class="tool-line"><span>STACK</span>REACT / TYPESCRIPT / TAILWIND / VITE</p><div class="project-actions"><a class="project-link" href="https://github.com/saumitg26/MissionPay-Guard-1" rel="noopener noreferrer" target="_blank">VIEW FRONTEND REPOSITORY <span aria-hidden="true">↗</span></a></div></div></div></article>
+<article class="project aegis" id="project-03" style="--project-accent:#a6e1cd">
+<div class="project-head reveal"><span class="micro">/03   EVIDENCE / SAFETY</span><span class="micro muted">TECHNICA · 2026</span></div>
+<div class="project-main">
+<div class="project-visual reveal"><div class="project-pane" style="--pane-accent:#a6e1cd"><div class="pane-top">EVIDENCE &amp; SAFETY</div><div class="pane-middle"><p class="pane-headline">Turn scattered records into a coherent case.</p><div aria-label="Project workflow" class="pane-flow"><span>01  COLLECT</span><span>02  CONNECT</span><span>03  REPORT</span></div></div><div class="pane-bottom"><span>Human-reviewed findings</span><span aria-hidden="true" class="pane-marker"></span></div></div></div>
+<div class="project-copy reveal" data-project-copy=""><h3>AEGIS</h3><h4>Evidence that keeps its context.</h4><div class="project-story"><div class="story-row"><span class="story-label">The problem</span><p>Digital harassment evidence can become scattered and difficult to review or summarize safely.</p></div><div class="story-row"><span class="story-label">My contribution</span><p>A solo prototype connecting incidents, evidence fingerprints, timelines, and human-reviewed reporting.</p></div><div class="story-row"><span class="story-label">The boundaries</span><p>Uses synthetic demo data. It is not a production evidence vault or an identity-verification system.</p></div></div><p class="tool-line"><span>STACK</span>REACT / FASTAPI / GEMINI / ELEVENLABS</p><div class="project-actions"><a class="project-link" href="https://github.com/saumitg26/Aegis" rel="noopener noreferrer" target="_blank">EXPLORE SOURCE CODE <span aria-hidden="true">↗</span></a><a class="secondary-link" href="https://aegis-hrt7.onrender.com/" rel="noopener noreferrer" target="_blank">OPEN DEMO ↗</a></div></div></div></article>
+<article class="project triage" id="project-04" style="--project-accent:#febca8">
+<div class="project-head reveal"><span class="micro">/04   HEALTH / DECISION SUPPORT</span><span class="micro muted">VTHACKS 14</span></div>
+<div class="project-main">
+<div class="project-visual reveal"><div class="project-pane" style="--pane-accent:#febca8"><div class="pane-top">CLINICAL DECISIONS</div><div class="pane-middle"><p class="pane-headline">Make urgency easier to understand.</p><div aria-label="Project workflow" class="pane-flow"><span>01  CAPTURE</span><span>02  ASSESS</span><span>03  PRIORITIZE</span></div></div><div class="pane-bottom"><span>Clinician in control</span><span aria-hidden="true" class="pane-marker"></span></div></div></div>
+<div class="project-copy reveal" data-project-copy=""><h3>TriageAI</h3><h4>Decision support under pressure.</h4><div class="project-story"><div class="story-row"><span class="story-label">The problem</span><p>Emergency intake workflows demand fast prioritization with clear visibility into what is suggested and what clinicians approve.</p></div><div class="story-row"><span class="story-label">My contribution</span><p>A team prototype combining contactless-vitals inputs, ESI 1–5 AI suggestions, and clinician override flows.</p></div><div class="story-row"><span class="story-label">The boundaries</span><p>Demonstration software, not clinically validated or intended for real medical decisions.</p></div></div><p class="tool-line"><span>STACK</span>REACT / FASTAPI / GEMINI / PRESAGE</p><div class="project-actions"><a class="project-link" href="https://github.com/saumitg26/triageaitest" rel="noopener noreferrer" target="_blank">EXPLORE SOURCE CODE <span aria-hidden="true">↗</span></a></div></div></div></article>
+<section class="outro" id="contact"><span class="eyebrow muted">02 / NEXT</span><h2>HAVE AN IDEA?<br/><em>LET'S BUILD.</em></h2><div class="outro-links"><a href="mailto:write2saumitg@gmail.com">EMAIL <span>↗</span></a><a href="https://github.com/saumitg26" rel="noopener noreferrer" target="_blank">GITHUB <span>↗</span></a><a href="https://www.linkedin.com/in/saumitg26/" rel="noopener noreferrer" target="_blank">LINKEDIN <span>↗</span></a><button aria-label="Copy email address" class="copy-email" title="Copy email address" type="button">COPY ADDRESS</button></div></section></main><footer><span class="footer-meta">© <span id="copyright-year">2026</span> SAUMIT GUDUGUNTLA</span><a class="footer-meta" href="#home">BACK TO TOP ↑</a></footer>
+<div aria-live="polite" class="sr-only" id="announce" role="status"></div><nav aria-label="Project navigation" class="work-traverse" hidden="">
+<span class="traverse-label" id="traverse-title">PROJECT 01 / 04</span>
+<a aria-label="Previous project" href="#project-01" id="traverse-prev">↑</a>
+<a aria-label="Next project" href="#project-02" id="traverse-next">↓</a>
+</nav><script>
+(() => {
+  'use strict';
+  const $ = (q,root=document) => root.querySelector(q);
+  const $$ = (q,root=document) => [...root.querySelectorAll(q)];
+  const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const work = $('#work'), contact = $('#contact'), projects = $$('article.project');
+  const progress = $('#reading-progress-bar');
+  const traverse = $('.work-traverse');
+  const previous = $('#traverse-prev'), next = $('#traverse-next'), position = $('#traverse-title');
+  const navLinks = $$('[data-nav-target]');
+  const indexLinks = $$('.editorial-index a');
+  const announce = $('#announce');
+  // Progressive enhancement: if observers are unavailable, content remains visible.
+  if ('IntersectionObserver' in window && !prefersReducedMotion.matches) {
+    document.documentElement.classList.add('has-reveal');
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}
+    }), {rootMargin:'0px 0px -6% 0px',threshold:.04});
+    $$('.reveal').forEach(el=>io.observe(el));
+  }
+  let ticking=false;
+  const activeFromScroll = () => {
+    const marker=Math.min(230,innerHeight*.28);
+    let current=-1;
+    projects.forEach((p,i)=>{if(p.getBoundingClientRect().top<=marker) current=i});
+    if(current<0 && work.getBoundingClientRect().top<=marker)current=0;
+    return current;
+  };
+  const update = () => {
+    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    progress.style.transform=`scaleX(${Math.min(1,Math.max(0,scrollY/max))})`;
+    const projectIndex=activeFromScroll();
+    const inWork=work.getBoundingClientRect().top<=innerHeight*.5 && contact.getBoundingClientRect().top>innerHeight*.36;
+    traverse.hidden=!(inWork && projectIndex>=0);
+    if(projectIndex>=0){
+      position.textContent=`PROJECT ${String(projectIndex+1).padStart(2,'0')} / 04`;
+      previous.href=projectIndex===0?'#work':'#'+projects[projectIndex-1].id;
+      previous.setAttribute('aria-label',projectIndex===0?'Return to project index':'Previous project: '+$('h3',projects[projectIndex-1]).textContent);
+      next.href=projectIndex===3?'#contact':'#'+projects[projectIndex+1].id;
+      next.setAttribute('aria-label',projectIndex===3?'Go to contact':'Next project: '+$('h3',projects[projectIndex+1]).textContent);
+    }
+    const navSection=contact.getBoundingClientRect().top<=innerHeight*.4?'contact':work.getBoundingClientRect().top<=innerHeight*.5?'work':'';
+    navLinks.forEach(a=>{if(a.dataset.navTarget===navSection)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+    indexLinks.forEach((a,i)=>{if(inWork && i===projectIndex)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+    ticking=false;
+  };
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update,{passive:true});update();
+  // Keep copy-email nonblocking, with fallback for non-secure contexts.
+  const copy=$('.copy-email');
+  copy.addEventListener('click',async()=>{
+    try{
+      if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');
+      await navigator.clipboard.writeText('write2saumitg@gmail.com');
+      copy.textContent='COPIED ✓';announce.textContent='Email address copied';
+      setTimeout(()=>{copy.textContent='COPY ADDRESS'},1700);
+    }catch{location.href='mailto:write2saumitg@gmail.com'}
+  });
+  // Hash/deep-link navigation works with CSS scroll-padding and without JavaScript.
+})();
+
+const copyrightYear=document.getElementById('copyright-year');if(copyrightYear) copyrightYear.textContent=String(new Date().getFullYear());
+</script></body></html>
